@@ -27,14 +27,14 @@
 
 %%% Definitions
 \definecolor{accentcolor}{rgb}{0.0,0.0,0.5} 
-\newcommand{\teamname}{Team Name}
-\newcommand{\productname}{Product Name}
+\newcommand{\teamname}{The Under Achievers}
+\newcommand{\productname}{Synthify}
 \newcommand{\coursename}{CSE 4316: Senior Design I}
-\newcommand{\semester}{Fall 2015}
+\newcommand{\semester}{Fall 2018}
 \newcommand{\docname}{Architectural Design Specification}
 \newcommand{\department}{Department of Computer Science \& Engineering}
 \newcommand{\university}{The University of Texas at Arlington}
-\newcommand{\authors}{Alan Turing \\ Grace Hopper \\ John Von Neumann \\ Ada Lovelace \\ Charles Babbage}
+\newcommand{\authors}{Dominic Young \\ Endy Pluviose \\ Kolten Sturgill \\ Mary Huerta \\ Mitchel Smith \\ Minh-Quan Nguyen}
 
 %%% Headers and footers
 \usepackage{fancyhdr}
@@ -70,9 +70,9 @@
 \vspace{0.5 in}
 \begin{figure}[h!]
 	\centering
-   	\includegraphics[width=0.60\textwidth]{images/test_image}
+   	\includegraphics[width=0.46\textwidth]{images/underachievers.png}
 \end{figure}
-\vspace{0.5 in}
+\vspace{0.3 in}
 {\centering \huge \color{accentcolor} \sc \textbf{\teamname \\ \productname} \par}
 \vspace{0.5 in}
 {\centering \large \sc \textbf{\authors} \par}
@@ -85,11 +85,7 @@
 
 %%% Revision History
 \begin{versionhistory}
-  	\vhEntry{0.1}{10.01.2015}{GH}{document creation}
-  	\vhEntry{0.2}{10.05.2015}{AT|GH}{complete draft}
-  	\vhEntry{0.3}{10.12.2015}{AT|GH}{release candidate 1}
-  	\vhEntry{1.0}{10.20.2015}{AT|GH|CB}{official release}
-  	\vhEntry{1.1}{10.31.2015}{AL}{added design review requests}
+  	\vhEntry{0.1}{11.30.2018}{DY, EP, MH, KS, MS, QN}{document creation}
 \end{versionhistory}
 \newpage
 
@@ -113,14 +109,23 @@
 \section{Subsystem Definitions \& Data Flow}
 \input{tex/data_flow.tex}
 \newpage
-\section{X Layer Subsystems}
-\input{tex/x_layer_subsystems.tex}
+\section{Client}
+\input{tex/client/client_subsystem.tex}
+\input{tex/client/redux_state_interface.tex}
+\input{tex/client/playlists.tex}
+\input{tex/client/search.tex}
+\input{tex/client/login.tex}
+\input{tex/client/media_player.tex}
+\input{tex/client/settings.tex}
+\input{tex/client/http_interface.tex}
 \newpage
-\section{Y Layer Subsystems}
-\input{tex/y_layer_subsystems.tex}
-\newpage
-\section{Z Layer Subsystems}
-\input{tex/z_layer_subsystems.tex}
+\section{Server}
+\input{tex/server/server_subsystem.tex}
+\input{tex/server/database.tex}
+\input{tex/server/controller.tex}
+\input{tex/server/cache.tex}
+\input{tex/server/queue.tex}
+\input{tex/server/http_interface.tex}
 \newpage
 
 %%% References
